@@ -32,10 +32,12 @@ Ask an AI agent to "design a UI" and you usually get one of two bad outcomes: a 
 
 ### Prerequisites
 
-- A Mobbin MCP server connected to your agent (used for `search_flows` / `search_screens` / `search_sections`).
-- An image-generation tool available to the agent (e.g. the built-in `imagegen` tool).
+This skill is a thin orchestration layer over two external capabilities it does **not** provide — you need both set up and paid for before it's useful:
 
-Without a Mobbin connection the skill has no reference source to work from — it's the core mechanic, not an optional enhancement.
+- **Mobbin MCP server, with a paid Mobbin Pro account.** The skill calls `search_flows` / `search_screens` / `search_sections` on every design direction. Mobbin's free tier does not expose this search access — a Mobbin Pro subscription (billed by Mobbin, independent of your AI provider) is required, and the MCP server must be connected to your agent and authenticated with that account.
+- **A paid image-generation tool available to the agent** — the built-in `imagegen` tool in Claude Code, or the equivalent image-generation tool in Codex CLI/OpenAI. Every exploration direction, every additional screen, and every in-place correction is a **separate metered image-generation call** billed against your account/API usage — a typical run (3 initial directions + several downstream screens + a few corrections) can add up to a dozen or more paid calls. There is no free/local fallback built into the skill.
+
+Without both, the skill has no reference source and no way to render output — these are the core mechanics, not optional enhancements. If cost is a concern, keep exploration runs small (fewer screens, fewer correction rounds) rather than expecting the skill to batch or economize on your behalf.
 
 ### Quick Install
 
@@ -83,12 +85,14 @@ Prompts stay short and reference-carried rather than turning into exhaustive com
 4. 后续界面延续选定的设计语言，一次调用只生成一张单一界面，不拼接多屏合图。
 5. 支持定点修正（只改一处细节而不重新生成整张图），而不是无限制地重新生成。
 
-### 前置依赖
+### 前置依赖（含真实费用，务必确认后再用）
 
-- Agent 已连接 Mobbin MCP（用于 `search_flows` / `search_screens` / `search_sections`）。
-- Agent 可调用图片生成工具（例如内置的 `imagegen`）。
+这个 skill 本身只是编排逻辑，不提供以下两项能力，使用前需要自行开通并承担各自费用：
 
-没有 Mobbin 连接，这个 skill 就没有参考素材来源——这是核心机制，不是可选增强。
+- **Mobbin MCP，且账号需为 Mobbin Pro 付费订阅**：每个设计方向都会调用 `search_flows` / `search_screens` / `search_sections`；Mobbin 免费版不开放这部分搜索权限，必须是付费的 Mobbin Pro 账号（费用由 Mobbin 收取，与你的 AI 服务商无关），并把对应 MCP 服务接入并授权给 Agent。
+- **可调用的付费图片生成工具**：Claude Code 内置的 `imagegen`，或 Codex CLI / OpenAI 侧对应的图片生成工具。三版初版探索、后续每张界面、每次定点修正，都是**各自独立计费的一次生图调用**——一次典型流程（3 版初探 + 若干后续界面 + 若干次修正）累计可能达到十几次甚至更多付费调用，skill 没有免费或本地兜底方案。
+
+两者缺一，这个 skill 要么没有参考素材来源、要么没法出图——这是核心机制，不是可选增强。如果在意花费，建议主动缩小探索范围（少要几张界面、少要几轮修正），不要指望 skill 会替你精打细算控制调用次数。
 
 ### 快速安装
 
