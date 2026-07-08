@@ -1,0 +1,9 @@
+interface:
+  display_name: "UI Prototyper"
+  short_description: "Design UI prototypes with Mobbin and imagegen"
+  default_prompt: "Use $ui-prototyper to ask up to five preference questions, generate three distinct main-screen design languages as separate images, and continue after I choose one."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "mobbin"
+      description: "Mobbin MCP for searching real screens, flows, and web sections before UI image generation."
