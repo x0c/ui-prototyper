@@ -44,13 +44,13 @@ Without both, the skill has no reference source and no way to render output — 
 **Claude Code:**
 
 ```bash
-git clone https://github.com/x0c/ui-prototyper.git ~/.claude/skills/ui-prototyper
+git clone https://github.com/x0c/ui-prototyper-skill.git ~/.claude/skills/ui-prototyper
 ```
 
 **Codex CLI:**
 
 ```bash
-git clone https://github.com/x0c/ui-prototyper.git ~/.codex/skills/ui-prototyper
+git clone https://github.com/x0c/ui-prototyper-skill.git ~/.codex/skills/ui-prototyper
 ```
 
 Restart your agent. The entry point is `SKILL.md`; `agents/openai.yaml` provides the Codex-specific interface metadata (display name, default prompt, Mobbin MCP dependency declaration).
@@ -99,13 +99,13 @@ Prompts stay short and reference-carried rather than turning into exhaustive com
 **Claude Code：**
 
 ```bash
-git clone https://github.com/x0c/ui-prototyper.git ~/.claude/skills/ui-prototyper
+git clone https://github.com/x0c/ui-prototyper-skill.git ~/.claude/skills/ui-prototyper
 ```
 
 **Codex CLI：**
 
 ```bash
-git clone https://github.com/x0c/ui-prototyper.git ~/.codex/skills/ui-prototyper
+git clone https://github.com/x0c/ui-prototyper-skill.git ~/.codex/skills/ui-prototyper
 ```
 
 重启你的 Agent 即可生效。入口是 `SKILL.md`；`agents/openai.yaml` 提供 Codex 专用的界面元数据（显示名称、默认提示词、Mobbin MCP 依赖声明）。
