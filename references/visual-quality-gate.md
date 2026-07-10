@@ -1,44 +1,40 @@
-# Visual Quality Gate
+# Product, Originality, and Visual Quality Gate
 
-Use this gate after every generated prototype and compare the result directly with its primary reference. Do not judge “modern” from adjectives alone.
+Evaluate generated prototypes in this order. A later strength never compensates for an earlier failure.
 
-## Reference selection
+## 1. Product fidelity
 
-Reject a primary reference when it is only functionally relevant but visually generic, dated, or mismatched to the target platform. Prefer a visually excellent adjacent-category screen over a mediocre exact-category match. Verify the system across nearby screens from the same product when possible.
+Fail the draft when:
 
-## Reference fidelity
+- any visible element cannot be traced to the product contract;
+- a required action, state, or piece of information is missing or visually subordinated;
+- reference-derived navigation, modes, labels, entities, controls, or workflows appear;
+- the interface suggests the product behaves differently from the user's requirements;
+- decorative styling makes a simple product feel more complex than it is.
 
-Require the generated screen to retain the reference's recognizable:
+Ask of every element: “Would we still need this if no reference had shown it?” If not, remove it.
 
-- content scale and information density;
-- typography hierarchy and line-length rhythm;
-- spacing, margins, and content width;
-- component geometry, corner treatment, borders, elevation, and material;
-- navigation and composer placement;
-- icon scale, weight, and visual restraint.
+## 2. Originality
 
-Changing copy, data, actions, and restrained brand accents is expected. Replacing the reference system with a generic template is not.
+Fail the draft when:
 
-## Automatic failure signals
+- its overall skeleton, control placement, or component sequence is recognizably copied from one reference;
+- it retains source-product chrome, distinctive icons, modes, pagination, feedback rows, or domain content;
+- the result is effectively a reskin with different copy and brand color;
+- a full-screen reference attachment dictated the composition instead of the product skeleton.
 
-Unless the user or primary reference explicitly requests them, fail a draft that introduces:
+References may contribute scoped principles, not a complete screen. Combine research insights through an original composition anchored in the product contract.
 
-- oversized headings, buttons, pills, cards, or excessive empty space;
-- thick borders, heavy shadows, glossy gradients, or every element inside a rounded container;
-- a hamburger menu, floating avatar, portrait, mascot, emblem, or decorative hero absent from the reference;
-- faux-luxury shorthand such as cream, gold, serif type, and a suited person merely because the product is called a butler or premium;
-- faux-futuristic shorthand such as neon, excessive glass, glowing gradients, or sci-fi controls merely because the product uses AI;
-- Android Material patterns in an iOS prototype, or platform chrome inconsistent with the reference;
-- desktop-like scale, implausible safe areas, legacy status/navigation treatment, or controls that look transplanted from an old template;
-- a visual result that would look essentially unchanged if the Mobbin reference were removed.
+## 3. Visual quality
 
-Do not “fix” a dated result by adding the words modern, beautiful, premium, or futuristic. Strengthen reference preservation and remove competing art direction.
+Fail the draft when it introduces unrequested oversized controls, excessive rounded containers, heavy shadows, glossy gradients, faux luxury, faux futurism, cross-platform legacy patterns, implausible safe areas, or generic template styling. Do not fix a dated result by adding words such as modern, premium, beautiful, or futuristic.
 
 ## Recovery order
 
-1. Shorten the prompt to a reference-first translation: preserve the interface system and change only product content.
-2. Reattach the reference through the strongest explicit image input and regenerate.
-3. If the system is right but one detail is wrong, edit the generated screen in place.
-4. If a second full generation still looks dated or generic, replace the primary reference.
+1. Remove any competitor image attachment and restate the product contract.
+2. Delete every element that lacks a product justification.
+3. Reduce Mobbin influence to one to three visual principles from multiple references.
+4. Regenerate with an original composition intent.
+5. If only one detail fails, edit the generated prototype in place without changing the validated product structure.
 
-Show only directions that pass both reference fidelity and platform-quality checks.
+Show only drafts that pass all three gates.
