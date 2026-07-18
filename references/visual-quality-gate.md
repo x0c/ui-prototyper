@@ -11,8 +11,12 @@ Fail the draft when:
 - reference-derived navigation, modes, labels, entities, controls, or workflows appear;
 - the interface suggests the product behaves differently from the user's requirements;
 - decorative styling makes a simple product feel more complex than it is.
+- an avatar, attachment affordance, menu, mode, status, or secondary action appears without being listed in the allowed-element manifest.
+- placeholder text, lorem ipsum, or invented gibberish copy appears where realistic content was required.
 
 Ask of every element: “Would we still need this if no reference had shown it?” If not, remove it.
+
+Inventory every visible interactive element before judging aesthetics. Do not rely on a general impression that the screen is product-faithful.
 
 ## 2. Originality
 
@@ -27,7 +31,7 @@ References may contribute scoped principles, not a complete screen. Combine rese
 
 ## 3. Visual quality
 
-Fail the draft when it introduces unrequested oversized controls, excessive rounded containers, heavy shadows, glossy gradients, faux luxury, faux futurism, cross-platform legacy patterns, implausible safe areas, or generic template styling. Do not fix a dated result by adding words such as modern, premium, beautiful, or futuristic.
+Fail the draft when it introduces unrequested oversized controls, excessive rounded containers, heavy shadows, glossy gradients, faux luxury, faux futurism, cross-platform legacy patterns, implausible safe areas, or generic template styling. Fail it equally for current AI-default styling: emoji used as navigation or action icons, all-caps micro-header labels, colored glow or tinted shadows, decorative stat-banner rows, and identical icon-topped feature cards. For data screens, fail invented or inconsistent figures, 3D charts, pies with more than five segments, and illegible dense labels. Do not fix a dated result by adding words such as modern, premium, beautiful, or futuristic.
 
 ## Recovery order
 
