@@ -2,6 +2,12 @@
 
 Evaluate every prototype individually, then evaluate the three directions as a set. A later strength never compensates for an earlier failure.
 
+## 0. Reference containment
+
+First-round exploration must be reference-free unless the user explicitly asks to attach or emulate a source. Mobbin research remains useful, but a source image has disproportionate visual weight in image generation and can turn a strong charter into a literal, familiar product template.
+
+For a later targeted edit, attach an accepted source only to repair one named craft failure. Fail the attachment, not necessarily the selected direction, when the source is generic at the intended scale, depends on product-specific semantics, or makes the result safer, more literal, or more ordinary. Keep the original when that happens.
+
 ## 1. Product fidelity
 
 Fail the draft when:
@@ -27,7 +33,7 @@ References contribute visual soul, never product body. Deep visual transfer is t
 
 ## 3. Craft and visual reasoning
 
-Fail the draft when it has no deliberate visual argument: default template typography, uniformly boxed content, identical component treatment, flat color with no role, or no visible craft inherited from the anchor. A draft that could have been produced without its reference has failed.
+Fail the draft when it has no deliberate visual argument: default template typography, uniformly boxed content, identical component treatment, flat color with no role, or no visible craft inherited from an accepted anchor or the direction charter. A reference-free direction is judged by the charter, not by the absence of an attachment.
 
 Check that the screen uses design fundamentals deliberately:
 
@@ -56,6 +62,7 @@ If the answer exposes a reskin, regenerate the weaker direction from an opposing
 
 1. Remove functional elements that lack product justification.
 2. If reference structure leaked in, restate the visual-only scope and regenerate.
-3. If a direction is generic, strengthen its visual proposition and reference transfer or choose a stronger anchor.
-4. If directions collapsed together, rewrite the weakest charter around a different composition and visual protagonist, then regenerate it.
-5. If only one detail fails in a selected, otherwise-valid screen, edit that generated prototype in place.
+3. If a direction is generic, strengthen its visual proposition. Remove a weak attachment before adding more prompt detail; otherwise choose a stronger anchor.
+4. If a later attachment weakens a selected direction, discard it and return to the reference-free original.
+5. If directions collapsed together, rewrite the weakest charter around a different composition and visual protagonist, then regenerate it.
+6. If only one detail fails in a selected, otherwise-valid screen, edit that generated prototype in place.
