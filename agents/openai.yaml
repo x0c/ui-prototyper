@@ -1,7 +1,7 @@
 interface:
   display_name: "UI Prototyper"
   short_description: "Design UI prototypes with Mobbin and imagegen"
-  default_prompt: "Use $ui-prototyper to lock the product requirements, research scoped Mobbin design principles, and directly generate three original product-first main-screen directions."
+  default_prompt: "Use $ui-prototyper to lock the product requirements, research visually strong Mobbin references, and directly generate three original main-screen directions with distinct visual languages."
 dependencies:
   tools:
     - type: "mcp"
