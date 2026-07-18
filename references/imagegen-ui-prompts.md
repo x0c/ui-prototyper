@@ -10,7 +10,7 @@ Keep prompts short and include only what materially controls the result:
 - **Required structure**: the hierarchy, content, actions, and states already justified by the product.
 - **Allowed elements**: an exhaustive manifest of visible controls and entities; forbid anything not listed.
 - **Original composition intent**: how this direction expresses that hierarchy without borrowing a source layout.
-- **Scoped visual principles**: one to three abstract lessons distilled from research, such as compact density, quiet material, editorial rhythm, or restrained action emphasis.
+- **Visual language brief**: a compact craft description distilled from the anchor reference — typographic voice, palette behavior, spacing character, density, shape and depth language. This brief carries the design sense; write it with care, not as an afterthought.
 - **Critical copy**: exact on-screen strings in the product language.
 - **Exclusions**: product-specific elements that must not appear.
 
@@ -18,7 +18,7 @@ Write instructions, scene, style, and constraints in English. Quote on-screen co
 
 Name the platform and device class when they materially shape the result (native iOS chrome, Android Material behavior, or responsive web). One anchor phrase is enough; do not pile on OS version numbers, component-level fidelity vocabulary, or layout measurements, which compress composition into stale templates.
 
-Do not name Mobbin source products inside the generation prompt. Do not describe their navigation, component sequence, or screen skeleton. Do not attach full competitor screenshots by default. If the user explicitly requests close emulation, disclose that tradeoff and scope the attachment to the requested visual dimension.
+Do not name Mobbin source products inside the generation prompt. Do not describe their navigation, component sequence, or screen skeleton. Attach the anchor reference image by default: visual craft does not survive text-only distillation, and an unattached reference rarely influences the result. When attaching, scope it in the prompt — state which visual dimensions the image may influence (typography, spacing, color behavior, material, composition feel) and forbid copying its layout, structure, components, and content. If the user explicitly requests close emulation, disclose that tradeoff and scope the attachment to the requested visual dimension.
 
 Keep exclusion lists short and specific. If the same unwanted element survives two generations, rephrase the exclusion as a positive description of what belongs there instead of lengthening the negative list.
 
@@ -46,7 +46,7 @@ Use this only when a selected high-fidelity final keeps drifting:
 - **Use case / asset**: one shippable screen and its product job.
 - **Product contract**: required hierarchy, actions, states, and exclusions.
 - **Original composition**: one sentence defining this direction's own layout logic.
-- **Visual principles**: up to three abstract research lessons.
+- **Visual principles**: the visual language brief, compressed to a few lines.
 - **Text**: exact product-language copy.
 - **Avoid**: unapproved features, source-product remnants, imitation, clutter, and extra screens.
 
