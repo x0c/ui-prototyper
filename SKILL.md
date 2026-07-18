@@ -1,63 +1,48 @@
 ---
 name: ui-prototyper
-description: "Create product-faithful, visually ambitious UI/UX prototype images for mobile apps, web apps, websites, and dashboards. Use Mobbin selectively as design research and imagegen to explore genuinely different original directions without copying a reference or inventing product behavior."
+description: "Create product-faithful, visually ambitious UI/UX prototype images for mobile apps, web apps, websites, and dashboards. Use imagegen to turn one real product moment into an original visual world, not a generic application shell."
 ---
 
 # UI Prototyper
 
-Create original UI/UX prototypes that serve the product. Stay within UI/UX design unless product strategy is explicitly requested.
+Make the product moment visually unforgettable. Do not make a neat but anonymous dashboard.
 
-## Separate product truth from presentation freedom
+## Lock truth; free the composition
 
-Before researching visuals, establish a private product contract:
+Privately identify the one present-tense moment shown in this image: what the person needs to notice, decide, or trust right now. Lock only its real state, decisive action, essential information, exact copy, platform, and hard exclusions.
 
-- the screen's job, user intent, required information, actions, states, navigation boundaries, exact copy, and exclusions;
-- any information hierarchy or placement explicitly fixed by the user;
-- platform, brand, and accessibility constraints.
+The contract protects product truth. It is not a wireframe and it is not a checklist requiring every route, setting, navigation label, and capability on the same canvas. Keep secondary capability as one quiet cluster or entry point, or reserve it for its own screen. Never invent product behavior.
 
-The contract locks product capabilities and user-specified hierarchy, not a wireframe. Unless the user supplied a detailed layout specification, do not turn it into a fixed rail, header, card, panel, or control sequence before exploration. A functional control, data entity, or navigation item must trace to the product contract. A non-functional visual element must trace to the selected design direction: typography, iconography, illustration, visual metaphor, material, color, or compositional device are allowed when they clarify the product's job without implying a new capability.
+## Start with a visual proposition
 
-Do not infer visual style from product semantics, brand adjectives, or the existing implementation. That path produces engineer-drawn reskins.
+For every direction, write a private proposition before naming controls. It must state:
 
-## Research visual systems, then let a reference earn attachment
+- the product transformation made physical or visible—for example, sound becoming language, scattered work becoming a plan, or uncertainty becoming a clear next step;
+- one dominant visual event, material field, typographic gesture, illustration, or graphic system that owns the screen at thumbnail size;
+- the reading path, deliberate asymmetry or balance, repetition, alignment, proximity, and negative space;
+- a small palette with distinct jobs: atmosphere, active motion, settled information, and interruption or danger;
+- how a quiet icon/control cluster supports the hero without competing with it.
 
-Use Mobbin after the contract is locked when it can answer a specific visual question:
+"Dark", "minimal", "premium", a centered card, or a status pill is not a visual proposition. The proposition must still be specific and memorable after all labels are removed.
 
-- `mcp__mobbin.search_flows` for multi-step flows.
-- `mcp__mobbin.search_screens` for screen and state problems.
-- `mcp__mobbin.search_sections` for web composition problems.
+Create three incompatible propositions. They must differ in visual event and spatial grammar, not merely background color, typography, or material.
 
-Search for the visual problem that needs solving: hierarchy, reading cadence, compositional tension, typographic voice, color behavior, material, density, illustration, icon language, or state communication. Inspect the returned images. Adjacent categories are welcome when their design craft solves the problem better.
+## Research, but do not attach Mobbin in exploration
 
-Do not treat a found screen as an automatic imagegen attachment. Give it a private attachment check. Attach it only when its visual system is visibly strong at the target screen size, contributes a concrete move not already present in the direction charter, and can transfer without borrowing its core product semantics. Reject a reference whose appeal depends mainly on its product-specific scene, feature, timeline, article, dashboard, or one-off illustration; a generic native screen is not a visual anchor.
+Use Mobbin to sharpen a proposition when it answers a concrete craft question. The first three imagegen calls are reference-free unless the user explicitly asks to emulate, combine, or attach a source. Never let a screenshot choose the product's structure.
 
-Create a private influence ledger for an accepted anchor. It may deeply influence composition energy, typography, spacing, color, material, depth, shape language, and visual assets. It must not contribute product semantics: structure, navigation, content, entities, terminology, workflows, or brand-specific controls. Same visual soul, different product body.
+After a user selects a direction, use an accepted reference only for one named craft repair. Attach the selected prototype itself as the edit target; do not redraw the product through a competitor screen.
 
-Show the user any Mobbin links that informed a direction. The first exploratory batch is generated from the direction charters alone: do not attach competitor or Mobbin images to those calls. This preserves the research insight without giving a source image enough visual weight to pull the result back to its familiar product template.
-
-Consider attaching an accepted anchor only after a user selects a direction and a specific craft problem remains unsolved. The attachment must have a named purpose—such as repairing typographic rhythm, material, or spatial tension—and it must be used for a targeted edit, not to redraw the selected product screen wholesale.
-
-## Author three irreducible directions
-
-Before generating, write a private direction charter for each option. It must name:
-
-- the composition and reading-path thesis;
-- the dominant visual protagonist (for example, type, a live signal, an illustration, a graphic system, or a material field);
-- the intended contrast, repetition, alignment, proximity, and color behavior;
-- the handling of iconography or illustration when it improves comprehension or gives the screen a memorable identity.
-
-The three charters must be visually incompatible, not alternate palettes for one composition. If changing the colors would make one charter indistinguishable from another, discard it. When the product does not dictate a fixed layout, explore different spatial topologies and ways of grouping the same capabilities. Preserve product behavior and mandatory hierarchy; do not preserve an unrequested component sequence.
-
-The first exploration batch is reference-free unless the user explicitly asks to emulate, combine, or attach a supplied/named source. This is not a weaker fallback: it prevents a source image from overpowering the original design proposition. Write charters as positive visual moves; do not replace art direction with a long list of aesthetic prohibitions.
-
-Illustration and icons are neither mandatory decoration nor forbidden by a functional manifest. Use a product-relevant visual device when it makes a state, rhythm, or concept easier to understand; never add a mascot, photo, or control merely to make the screen look designed.
-
-## Generate and inspect
+## Write the prompt in this order
 
 Read `references/imagegen-ui-prompts.md` and `references/visual-quality-gate.md` before generating.
 
-Generate one interface screen per imagegen call and one call per direction. Start every prompt with the direction charter, then state the screen job and concise product guardrails. Keep shared product-language copy byte-identical across directions. Do not attach Mobbin images during first-round exploration. Do not ask for prompt approval unless the user explicitly asks to review prompts.
+Lead with `Visual proposition — “name”`, then describe the visual world with concrete material, spatial, typographic, and color behavior. State the screen truth next. Finish with only the active action, essential supporting controls, concise exact copy, and specific exclusions. Write art direction in English; preserve quoted on-screen copy in the product language.
 
-Use a manifest only to lock required functional elements, states, exact copy, and truly prohibited product behavior. Do not use an exhaustive "show only" inventory that bans every icon, illustration, graphic treatment, or alternate grouping and collapses exploration into a reskin.
+Do not begin from a sidebar, top status row, central card, control panel, or a complete product inventory unless the user explicitly fixed that layout. Do not use a long “show only” manifest. A secondary setting may be a paired micro-control, a settings glyph, or one quiet entry rather than a full utility region.
 
-Inspect each result against the product contract and quality gate. Then inspect the three results side by side. Reject and regenerate any direction that is merely a palette, theme, or material swap of another, even when it independently looks polished. Present only three directions that pass product fidelity, originality, craft, and pairwise divergence. After the user selects or combines a direction, generate additional screens and empty, loading, and error states as separate one-screen calls in that chosen system. Use a qualifying Mobbin attachment only for a targeted later edit when the selected direction has a named craft failure.
+## Generate like a designer
+
+Generate one screen at a time and inspect it immediately; never spend the first three calls as an unchecked parallel batch. Reject a result when product chrome, navigation, boxes, or ordinary controls push the visual event into the background. Rewrite the proposition—not a larger control list—and regenerate before moving on.
+
+Generate only one interface screen per image. Keep shared copy byte-identical across directions. Once a direction passes, create its secondary, empty, loading, and error screens as separate calls in the same visual world.

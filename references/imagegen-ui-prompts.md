@@ -1,52 +1,35 @@
 # Imagegen UI Prompts
 
-Write prompts around the product and a deliberate visual proposition, not a reference or a component checklist. Mobbin informs the designer's judgment; it does not enter first-round imagegen calls.
+The first paragraph has to make an image model want to draw this exact screen. Product requirements come afterward to keep that image honest.
 
-## Prompt order
+## Prompt shape
 
-Put the direction charter first, because imagegen needs to know what makes this version visually unlike the other two. Then include:
+```text
+Create one original high-fidelity <platform> interface for <product> while <one active product moment>.
+This is a reference-free exploration: invent an original visual system, not a generic dashboard or a copy of another app.
 
-1. **Visual proposition**: composition and reading path; dominant visual protagonist; contrast, repetition, alignment, proximity, color, material, typography, icon, or illustration intent.
-2. **Screen truth**: what this screen enables and the user decision it supports.
-3. **Product guardrails**: only the required actions, states, information, exact copy, and exclusions that would change product behavior if wrong.
-4. **Reference scope, only in a later targeted edit**: attach an accepted anchor only after a direction was selected and a named craft failure remains. State the one visual dimension it may improve and forbid copying layout, structure, components, content, and identity. Omit this section for all first-round exploration calls.
-5. **Critical copy**: quote exact on-screen strings in the product language.
+Visual proposition — “<short name>”: make <product transformation> the visual protagonist.
+<Describe one concrete visual event or material field. Describe how it leads the eye into the live / decisive information.>
+Use <atmosphere color>, <active-motion color>, <settled-information color>, and <interruption color> with distinct roles.
+Use <repeated motif>, <typographic contrast>, controlled alignment, deliberate negative space, and <asymmetry or balance>.
+Put secondary controls into <one quiet instrument cluster / unobtrusive entry>; they must not compete with the protagonist.
 
-Write instructions, scene, style, and constraints in English. Quote on-screen copy verbatim in the product language. For non-Latin copy, name the script explicitly, for example “Simplified Chinese characters”. Use real, representative content; placeholder text and lorem ipsum are forbidden. Require one image containing one interface screen only.
+Screen truth: the person must immediately know <state>, read <essential information>, trust <critical fact>, and perform <decisive action>.
 
-Name the platform or device class only when it materially affects the result. Do not pile up OS-version, component-fidelity, measurement, or full component-inventory language: that turns a visual exploration into the same safe template three times.
+Include legible <script> copy: "<only copy that visibly belongs on this screen>".
+One interface screen only. No placeholder text, watermark, invented feature, or extra application page.
+```
 
-## Product guardrails without a visual straightjacket
+The visual proposition needs physical specificity. Prefer "layered paper contours converge into crisp text" over "use a waveform"; "a ribbon of fragments settles into a decision" over "show task cards". This is not a request to literalize every product noun. A visual metaphor explains the moment; it does not add a feature.
 
-List the functional elements that must be present, the ones that must not exist, and the exact text that matters. Do not phrase this as “show only” every visible object unless the user truly supplied a pixel-level specification. Functional constraints do not forbid non-functional design assets such as a meaningful signal visualization, an icon family, an illustration, a graphic system, or expressive typography.
+## Keep the truth compact
 
-Do not name Mobbin source products inside the prompt. The attachment should transfer visual craft, not product semantics. Keep exclusions short and specific. Use positive visual moves rather than blanket aesthetic bans such as “no cards, no shadows, no gradients, no illustrations”; those lists often erase the direction's visual vocabulary and leave a generic template. If the same unwanted element survives twice, describe the positive alternative rather than extending a negative list.
+Ask which facts are indispensable **in this moment**. Usually these are the active state, one decisive action, the information that makes it trustworthy, and one small access point to secondary surfaces. Do not require every real setting, destination, analytics panel, and navigation label on the first image.
 
-Keep product nouns out of art direction unless the user explicitly wants a literal theme. A useful visual asset must support comprehension, hierarchy, or product identity; it must not invent a person, feature, destination, or action.
+Do not use terms such as `sidebar`, `status row`, `central card`, `utility panel`, `dashboard`, or `settings panel` as a default starting layout. If a user requires one, use it; otherwise let the proposition choose the grouping.
 
-## Research-first, reference-free exploration
+Use exact product-language copy where the user needs to read or act. Keep it short enough to remain legible. Shared strings must be copied verbatim across directions.
 
-Use Mobbin to sharpen direction charters, not as a mandatory input to the generator. First-round prompts must not include a reference image. This avoids literal transfer from a source product and prevents a small, generic, or product-specific screenshot from dominating the visual result.
+## Reference and editing
 
-After the user selects a direction, consider a source image only for a targeted edit. Ask privately: is its craft legible at the target scale; does it add one specific visual move beyond the selected direction; and can it transfer without importing the source screen's product body? If any answer is no, retain the research insight but do not attach the image. Tiny generic mobile screens, one-off product scenes, and sources whose appeal is inseparable from an article, recording timeline, meditation scene, or dashboard are usually research-only, not anchors.
-
-Keep the product contract and shared scenario stable, but let each direction express it through a genuinely different visual system. Vary the composition, focal device, typography, density, color logic, material, grouping, and icon or illustration treatment when appropriate. Do not reuse the same “sidebar, status row, central card, utility strip” skeleton merely because it is familiar.
-
-Build all first three prompts from their charters, not generic words such as “modern”, “premium”, or “beautiful”. Use reference-free generation as the default, not as an inferior control. If a later attachment makes the selected direction safer, more literal, or less memorable, discard it and retain the original.
-
-Use only the copy each composition needs and paste common strings verbatim from one source. A direction is invalid if another direction could become it through a simple background or palette change.
-
-## Charts and dense data
-
-Image models render approximate charts and garble dense small labels. For dashboards and data screens:
-
-- Name each chart type (line, bar, donut) instead of saying “chart” or “graph”.
-- Supply the exact numbers, labels, and legend strings as content; never let the model invent figures.
-- Keep dense small text to a minimum; prefer one clear figure over a wall of labels.
-- Avoid 3D charts and pies with more than five segments.
-
-## Editing a close result
-
-When a generated screen is close, attach that prototype as the edit target. Preserve its validated product structure and change only the named failing detail. Do not attach a competitor screenshot as the edit target.
-
-For a selected high-fidelity final that keeps drifting, use a short scaffold: visual proposition, screen truth, product guardrails, exact text, and avoid list. It is an intent checklist, not a component-by-component specification.
+Mobbin research informs the charter but never enters first-round calls by default. If a selected direction has one named craft failure, attach the chosen generated prototype as an edit target and change that failure only. A later Mobbin attachment may improve one named craft dimension, never the screen's product body.
