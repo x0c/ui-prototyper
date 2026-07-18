@@ -29,7 +29,7 @@ Use Mobbin after the product skeleton is locked:
 - `mcp__mobbin.search_screens`: individual product screens and states.
 - `mcp__mobbin.search_sections`: website sections.
 
-Search for specific design problems such as composer density, inline decisions, hierarchy, typography, material, or state communication rather than a complete product to imitate. Inspect the returned images. Prefer visually strong, current references, including adjacent categories when they solve the design problem better.
+Search for specific design problems such as composer density, inline decisions, hierarchy, typography, material, or state communication rather than a complete product to imitate. For a component-level problem, compare that component across many products instead of studying one product's whole screen. Inspect the returned images. Prefer visually strong, current references, including adjacent categories when they solve the design problem better.
 
 Create a private influence ledger for each direction:
 
@@ -44,7 +44,7 @@ Do not attach a full competitor screen to imagegen by default. Full-screen attac
 
 Generate three original versions of the main screen before expanding a flow. Keep the product contract, information hierarchy, required actions, and product vocabulary consistent across all three. Vary visual language through composition, typography, density, material, color behavior, and interaction expression without inventing new product capabilities.
 
-Generate each direction with a separate imagegen call. Every call must produce one image containing one interface screen only. Present the three images separately and wait for the user to select or combine a direction before generating other screens.
+Generate each direction with a separate imagegen call. Every call must produce one image containing one interface screen only. Present the three images separately and wait for the user to select or combine a direction before generating other screens. When expanding a flow, generate empty, loading, and error states as separate one-screen calls in the selected design language.
 
 Do not ask for prompt approval by default. Infer designer-owned details, provide a concise progress update, and generate directly. Show prompts first only when the user explicitly asks to review them.
 
@@ -60,6 +60,6 @@ Build prompts in this priority order:
 4. Scoped visual principles distilled from Mobbin research.
 5. Critical on-screen copy in the product language.
 
-Use brand-new generation without competitor image attachments by default. Keep prompts concise and do not name source products inside the generation prompt. Product meaning must dominate visual influence.
+Before calling imagegen, derive an allowed-element manifest from the product contract and state that no other visible controls or entities may appear. Use brand-new generation without competitor image attachments by default. Keep prompts concise and do not name source products inside the generation prompt. Product meaning must dominate visual influence.
 
-Inspect every result against the quality gate. Reject any draft that contains an element not justified by the product contract, resembles one source screen's overall composition, retains source-product controls or concepts, or looks visually dated. Fix a close result in place; otherwise regenerate from the product skeleton with narrower research influence. Show only directions that pass product fidelity, originality, and visual quality.
+Inspect every result by inventorying all visible controls and entities against the allowed-element manifest, then apply the quality gate. Reject any draft that contains an unlisted element, resembles one source screen's overall composition, retains source-product controls or concepts, or looks visually dated. Fix a close result in place; otherwise regenerate from the product skeleton with narrower research influence. Show only directions that pass product fidelity, originality, and visual quality.
